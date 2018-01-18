@@ -203,7 +203,7 @@ cyassl_connect_step1(struct connectdata *conn,
     return CURLE_SSL_CONNECT_ERROR;
   case CURL_SSLVERSION_SSLv3:
 #ifdef WOLFSSL_ALLOW_SSLV3
-    req_method = SSLv3_client_method();
+    req_method = TLSv1_2_client_method(); // Force to TLS 1.2
     use_sni(FALSE);
 #else
     failf(data, "CyaSSL does not support SSLv3");

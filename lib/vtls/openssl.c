@@ -992,7 +992,7 @@ static void Curl_ossl_cleanup(void)
   CONF_modules_free();
 
 #ifdef HAVE_SSL_COMP_FREE_COMPRESSION_METHODS
-  SSL_COMP_free_compression_methods();
+  //SSL_COMP_free_compression_methods();
 #endif
 #endif
 
@@ -2107,7 +2107,7 @@ static CURLcode ossl_connect_step1(struct connectdata *conn, int sockindex)
     if(ssl_authtype == CURL_TLSAUTH_SRP)
       return CURLE_SSL_CONNECT_ERROR;
 #endif
-    req_method = SSLv3_client_method();
+    req_method = TLS_client_method();
     use_sni(FALSE);
     break;
 #endif
