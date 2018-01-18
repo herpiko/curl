@@ -89,7 +89,7 @@ LINKLIB  = $(LINKLIB) $(ZLIB_PATH)\zlib.lib
 !ifdef WITH_SSL
 DEFINES  = $(DEFINES) -DUSE_OPENSSL
 INCDIRS  = $(INCDIRS);$(OPENSSL_PATH)\inc32;$(OPENSSL_PATH)\inc32\openssl
-LINKLIB  = $(LINKLIB) $(OPENSSL_PATH)\out32\ssleay32.lib $(OPENSSL_PATH)\out32\libeay32.lib
+LINKLIB  = $(LINKLIB) $(OPENSSL_PATH)\out32\ssl.lib $(OPENSSL_PATH)\out32\crypto.lib
 !endif
 
 .autodepend

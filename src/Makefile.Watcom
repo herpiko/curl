@@ -202,8 +202,8 @@ curl.exe: $(OBJS) $(RESOURCE)
 	@%append $(LINK_ARG) library '$(LIBSSH2_ROOT)/win32/libssh2.lib'
 ! endif
 ! ifdef %use_ssl
-	@%append $(LINK_ARG) library '$(OPENSSL_ROOT)/out32/libeay32.lib'
-	@%append $(LINK_ARG) library '$(OPENSSL_ROOT)/out32/ssleay32.lib'
+	@%append $(LINK_ARG) library '$(OPENSSL_ROOT)/out32/crypto.lib'
+	@%append $(LINK_ARG) library '$(OPENSSL_ROOT)/out32/ssl.lib'
 ! endif
 ! ifdef %use_ares
 	@%append $(LINK_ARG) library '$(ARES_ROOT)/cares.lib'

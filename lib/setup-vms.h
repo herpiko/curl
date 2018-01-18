@@ -310,7 +310,6 @@ static struct passwd * vms_getpwuid(uid_t uid)
 #define SSL_write SSL_WRITE
 #define SSLeay SSLEAY
 #define SSLv23_client_method SSLV23_CLIENT_METHOD
-#define SSLv3_client_method SSLV3_CLIENT_METHOD
 #define TLSv1_client_method TLSV1_CLIENT_METHOD
 #define UI_create_method UI_CREATE_METHOD
 #define UI_destroy_method UI_DESTROY_METHOD
