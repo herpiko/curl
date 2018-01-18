@@ -49,3 +49,13 @@ To download the very latest source off the Git server do this:
 Curl contains pieces of source code that is Copyright (c) 1998, 1999 Kungliga
 Tekniska Högskolan. This notice is included here to comply with the
 distribution terms.
+
+## LibreSSL Build
+
+This branch has been customized to work with LibreSSL. Note that SSL compresion will be disabled, SSLv3 being forced to TLS and it's only for MSVC 14 2015.
+
+Build command,
+
+```
+nmake /f Makefile.vc mode=static WITH_SSL=static ENABLE_WINSSL=no DEBUG=yes MACHINE=x64 VC=14
+```
