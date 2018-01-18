@@ -117,15 +117,15 @@ LFLAGS         = $(LFLAGS) "/LIBPATH:$(DEVEL_LIB)"
 !IF EXISTS("$(DEVEL_LIB)\libssl.lib")
 SSL_LIBS     = libssl.lib libcrypto.lib
 !ELSE
-SSL_LIBS     = libeay32.lib ssleay32.lib
+SSL_LIBS     = crypto.lib ssl.lib tls.lib
 !ENDIF
 USE_SSL      = true
 SSL          = dll
 !ELSEIF "$(WITH_SSL)"=="static"
 !IF EXISTS("$(DEVEL_LIB)\libssl.lib")
-SSL_LIBS     = libssl.lib libcrypto.lib gdi32.lib user32.lib crypt32.lib
+SSL_LIBS     = crypto.lib ssl.lib tls.lib
 !ELSE
-SSL_LIBS     = libeay32.lib ssleay32.lib gdi32.lib user32.lib crypt32.lib
+SSL_LIBS     = crypto.lib ssl.lib tls.lib
 !ENDIF
 USE_SSL      = true
 SSL          = static
